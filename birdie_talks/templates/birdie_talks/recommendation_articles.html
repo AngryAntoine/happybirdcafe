@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <!-- START THE FEATURETTES -->
+      <hr class="featurette-divider">
+      {% for recommendation in recommendations %}
+      <div class="row featurette">
+        <div class="col-md-7">
+          <a href="{% url 'birdie_talks:recommendation_detail' recommendation.id %}"><h2 class="featurette-heading">{{ recommendation.title }}</h2></a>
+          <p class="lead">{{ recommendation.text|truncatewords:10 }}</p>
+        </div>
+        <a href="{% url 'birdie_talks:recommendation_detail' recommendation.id %}"><div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="{% if recommendation.image %}{{ recommendation.image }}{% else %}{% static "img/birds-wallpapers-1920x1080-00013.jpg" %}{% endif %}" alt="{{ article.title }}-photo">
+        </div></a>
+      </div>
+      <hr class="featurette-divider">
+      {% endfor %}
+      <!-- /END THE FEATURETTES -->
+    <div class="col-md-1"></div>
+    </div>
+    </div>
+{% endblock %}

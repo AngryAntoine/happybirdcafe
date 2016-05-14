@@ -65,7 +65,7 @@ class Migration(migrations.Migration):
             options={
                 'ordering': ('title',),
                 'verbose_name': 'recommendation',
-                'verbose_name_plural': 'recommendations',
+                'verbose_name_plural': 'recommendation_articles',
             },
         ),
     ]

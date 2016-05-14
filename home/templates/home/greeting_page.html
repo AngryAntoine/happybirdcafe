@@ -41,14 +41,15 @@
               </nav>
             </div>
           </div> -->
+          {% for greeting in greeting %}
           <div class="inner cover">
-            <h1 class="cover-heading">Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <h1 class="cover-heading">{{ greeting.title }}</h1>
+            <p class="lead">{{ greeting.greeting_text }}</p>
             <p class="lead">
-              <a href="{% url 'birdie_talks:birdie_talks' %}" class="btn btn-lg btn-primary">Learn more</a>
+              <a href="{% url 'birdie_talks:birdie_talks' %}" class="btn btn-lg btn-primary">{{ greeting.button_text }}</a>
             </p>
           </div>
-
+          {% endfor %}
           <!--<div class="mastfoot">
             <div class="inner">
               <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>

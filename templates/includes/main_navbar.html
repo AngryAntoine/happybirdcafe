@@ -1,17 +1,16 @@
+{% load static from staticfiles %}
       <div class="masthead">
-          <a href="{% url 'home:greeting_page' %}">
         <h3 class="te1xt-muted" style=" font-size: 40px; font-family: 'Lobster', cursive;">Поговорим о птицах</h3>
-        </a>
         <nav>
           <ul class="nav nav-justified">
-            <li class="dropdown active">
+            <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Поговорим о птицах <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li class="active"><a href="#">Подкормка</a></li>
-            <li><a href="#">Рекомендации</a></li>
-            <li><a href="#">Виды кормушек</a></li>
+            <li><a href="{% url 'birdie_talks:birdie_talks' %}">Подкормка</a></li>
+            <li><a href="{% url 'birdie_talks:recommendation_articles' %}">Рекомендации</a></li>
+            <li><a href="{% url 'birdie_talks:feeders_types' %}">Виды кормушек</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Форум</a></li>
+            <li><a href="{% url 'birdie_talks:forum' %}">Форум</a></li>
           </ul>
         </li>
             <li><a href="#">Ваши кормушки</a></li>

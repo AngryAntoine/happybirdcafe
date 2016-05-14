@@ -1,22 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Поговорим о птицах{% endblock %}
 {% block content %}
+    <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
       <!-- START THE FEATURETTES -->
-
       <hr class="featurette-divider">
+      {% for article in articles %}
       <div class="row featurette">
         <div class="col-md-7">
-          <a href="#"><h2 class="featurette-heading">Заголовок статьи</h2></a>
-          <p class="lead">Текст-текст-текст-текст-текст-текст-текст-текст-текст-текст-текст-текст-текст-текст-текст.</p>
+          <a href="{% url 'birdie_talks:article_detail' article.id %}"><h2 class="featurette-heading">{{ article.title }}</h2></a>
+          <p class="lead">{{ article.text|truncatewords:10 }}</p>
         </div>
-        <a href="#"><div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="http://dummyimage.com/300/09f/fff.png" alt="Generic placeholder image">
+        <a href="{% url 'birdie_talks:article_detail' article.id %}"><div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="{% if article.image %}{{ article.image.url }}{% else %}{% static "img/birds-wallpapers-1920x1080-00013.jpg" %}{% endif %}" alt="{{ article.title }}-photo">
         </div></a>
       </div>
       <hr class="featurette-divider">
-
-
+      {% endfor %}
       <!-- /END THE FEATURETTES -->
+    <div class="col-md-1"></div>
+    </div>
     </div>
 {% endblock %}

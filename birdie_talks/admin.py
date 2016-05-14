@@ -7,3 +7,4 @@ admin.site.register(Article)
 admin.site.register(Recommendation)
 
 admin.site.register(Feeder)
+
