@@ -13,10 +13,10 @@
             <li><a href="{% url 'birdie_talks:forum' %}">Форум</a></li>
           </ul>
         </li>
-            <li><a href="#">Ваши кормушки</a></li>
-            <li><a href="#">Наши кормушки</a></li>
-            <li><a href="#">Корм для птиц</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="{% url 'your_feeders:feeders_types' %}">Ваши кормушки</a></li>
+            <li><a href="{% url 'our_feeders:feeders_types' %}">Наши кормушки</a></li>
+            <li><a href="{% url 'food:food' %}">Корм для птиц</a></li>
+            <li><a href="{% url 'contacts:contacts' %}">Контакты</a></li>
           </ul>
         </nav>
       </div>

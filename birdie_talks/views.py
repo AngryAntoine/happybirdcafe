@@ -28,9 +28,11 @@ def feeders_type(request):
 
 
 def feeders_type_details(request, feeder_id):
-    feeders_type_detail = get_object_or_404(Feeder, pk=feeder_id)
-    return render(request, 'birdie_talks/feeders_type_detail.html', {'feeders_type_detail': feeders_type_detail})
+    feeders_types = get_object_or_404(Feeder, id=feeder_id)
+    feeders_type_detail = get_object_or_404(Feeder, id=feeder_id)
+    return render(request, 'birdie_talks/feeders_type_detail.html', {'feeders_types': feeders_types, 'feeders_type_detail': feeders_type_detail})
 
 
 def forum(request):
     return render(request, 'birdie_talks/forum.html')
+

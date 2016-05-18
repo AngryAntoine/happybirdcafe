@@ -6,10 +6,11 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
-        <img src="{% if feeders_types.image %}{{ feeders_types.image.url }}{% else %}{% static "img/custom_feeder.jpg" %}{% endif %}" height="250" alt="" onclick="changeSizeImage(this)">
+        <img src="{% if our_feeders_types.image %}{{ our_feeders_types.image.url }}{% else %}{% static "img/custom_feeder.jpg" %}{% endif %}" height="250" alt="" onclick="changeSizeImage(this)">
             <p>Нажми для увеличения</p>
-            <h2>{{ feeders_type_detail.title }}</h2>
-            <p>{{ feeders_type_detail.text }}</p>
+            <h2>{{ our_feeders_type_detail.title }}</h2>
+            <h3>{{ our_feeders_type_detail.price }} грн.</h3>
+            <p>{{ our_feeders_type_detail.text }}</p>
             <hr>
         <p style="text-align: center;">
           <a href="{% url 'our_feeders:feeders_types' %}">

@@ -2,21 +2,12 @@
 {% load static %}
 {% block title %}Joker{% endblock %}
 {% block content %}
-    <br><br>
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
-        <img src="{% if feeders_types.image %}{{ feeders_types.image.url }}{% else %}{% static "img/custom_feeder.jpg" %}{% endif %}" height="250" alt="" onclick="changeSizeImage(this)">
-            <p>Нажми для увеличения</p>
-            <h2>{{ feeders_type_detail.title }}</h2>
-            <p>{{ feeders_type_detail.text }}</p>
-            <hr>
-        <p style="text-align: center;">
-          <a href="{% url 'our_feeders:feeders_types' %}">
-            <button class="btn btn-primary" type="button">К списку кормушек</button>
-          </a>
-        </p>
-        <div id="disqus_thread"></div>
+        <h1>Форум</h1>
+      <div id="disqus_thread"></div>
+      </div>
       <div class="col-md-1"></div>
       </div>
       </div>

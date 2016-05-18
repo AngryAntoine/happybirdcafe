@@ -23,6 +23,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'', include('home.urls', namespace='home')),
     url(r'^birdie_talks/', include('birdie_talks.urls', namespace='birdie_talks')),
+    url(r'^your_feeders/', include('your_feeders.urls', namespace='your_feeders')),
+    url(r'^our_feeders/', include('our_feeders.urls', namespace='our_feeders')),
+    url(r'^food/', include('food.urls', namespace='food')),
+    url(r'^contacts/', include('contacts.urls', namespace='contacts')),
     url(r'^admin/', admin.site.urls),
 ]
 #

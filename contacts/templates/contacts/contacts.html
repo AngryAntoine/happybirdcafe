@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{% endblock %}
+{% block content %}
+    <br><br>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        {% for contact in contacts %}
+          <div class="col-lg-4" style=" margin-bottom: 20px; text-align: center;">
+{#            <img class="img-circle" src="{% if food.image %}{{ food.image.url }}{% else %}{% static "img/custom_feeder.jpg" %}{% endif %}" alt="Generic placeholder image" width="140" height="140" style="text-align: center;">#}
+            <h2>{{ contact.phone }}</h2>
+            <p>{{ contact.email }}</p>
+            <p><a class="btn btn-default" href="{% url 'home:greeting_page' food.id %}" role="button">Подробно &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        {% endfor %}
+      </div>
+      <div class="col-md-1"></div>
+  </div>
+{% endblock %}

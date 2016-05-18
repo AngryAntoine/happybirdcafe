@@ -27,13 +27,15 @@ a:hover {
 html,
 body {
   height: 100%;
-  background: url("http://wallpapers-images.ru/1920x1080/birds/wallpapers/birds-wallpapers-1920x1080-00013.jpg");
+  background: url("http://wallpapers-images.ru/1920x1080/birds/wallpapers/birds-wallpapers-1920x1080-00013.jpg") no-repeat;
   background-size: 100%;
 }
 body {
   color: black;
   text-align: center;
-  background: rgba(200, 255, 139, 0.5);
+  background: #c8ff8b;
+  background-color: rgba(200,255,139,0.5);
+  /*opacity: 0.8;*/
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
@@ -57,7 +59,7 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 0px;
+  padding: 30px;
 }
 
 
@@ -169,8 +171,8 @@ html {
 }
 
 body {
-  padding-top: 0px;
-  margin-bottom: 0px;
+  padding-top: 20px;
+  margin-bottom: 60px;
 }
 
 .footer {

@@ -14,6 +14,15 @@
     <meta name="author" content="">
     <link rel="icon" href="{% static 'favicon/favicon.ico' %}">
     <title>{% block head_title %}{% endblock %}</title>
+    <link href="lightgallery/skins/default/style.css" type="text/css" media="screen" rel="stylesheet" />
+    <script>
+        var bigsize = "600px";
+        var smallsize = "250px";
+        function changeSizeImage(im) {
+            if(im.style.height == smallsize) im.style.height = bigsize;
+            else im.style.height = smallsize;
+            }
+    </script>
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet">
