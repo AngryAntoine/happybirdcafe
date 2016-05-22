@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{% endblock %}
+{% block content %}
+    <br><br>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <p style="text-align: center;">
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          Жми для инструкций
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Важно!</h4>
+              </div>
+              <div class="modal-body">
+                Перед тем, как нажать кнопку "Сохранить", внимательно проверь, все ли поля правильно заполнены.
+                Так как у тебя лишь одна попытка оформить карточку кормушки. Если будет необходимость что-то исправить -
+                в разделе "Контакты" есть наши данные. Не стесняйся, пиши свои пожелания.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </p>
+        <h1>Новая кормушка</h1>
+        <form method="POST" class="post-form">
+          {% csrf_token %}
+          {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Сохранить</button>
+        <br><br>
+        </form>
+      </div>
+      <div class="col-md-1"></div>
+  </div>
+{% endblock %}

@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^$', views.feeders_type, name='feeders_types'),
     url(r'^details/(?P<your_feeder_id>[0-9]+)/$', views.feeders_type_details,
         name='feeders_type_details'),
+    url(r'^new/$', views.new_feeder, name='new_feeder'),
 ]

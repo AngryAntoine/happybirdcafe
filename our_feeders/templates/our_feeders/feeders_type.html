@@ -9,7 +9,7 @@
         {% for feeder in our_feeders_types %}
           <div class="col-lg-4" style=" margin-bottom: 20px; text-align: center;">
             <img class="img-circle" src="{% if feeder.image %}{{ feeder.image.url }}{% else %}{% static "img/custom_feeder.jpg" %}{% endif %}" alt="Generic placeholder image" width="140" height="140" style="text-align: center;">
-            <h2>{{ feeder.title }}</h2>
+            <h2>{{ feeder.pupil_name }}</h2>
             <p>{{ feeder.text|truncatewords:15 }}</p>
             <p><a class="btn btn-default" href="{% url 'our_feeders:feeders_type_details' feeder.id %}" role="button">Подробно &raquo;</a></p>
           </div><!-- /.col-lg-4 -->

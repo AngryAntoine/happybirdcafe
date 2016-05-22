@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-22 15:03+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: birdie_talks/models.py:13 birdie_talks/models.py:37
+#: birdie_talks/models.py:60 contacts/models.py:13 food/models.py:13
+#: our_feeders/models.py:13 your_feeders/models.py:13
+msgid "author"
+msgstr ""
+
+#: birdie_talks/models.py:14 birdie_talks/models.py:38
+#: birdie_talks/models.py:61 contacts/models.py:14 food/models.py:14
+#: home/models.py:11 our_feeders/models.py:14 your_feeders/models.py:14
+msgid "title"
+msgstr ""
+
+#: birdie_talks/models.py:15 birdie_talks/models.py:39
+#: birdie_talks/models.py:62 food/models.py:15 our_feeders/models.py:15
+#: your_feeders/models.py:15
+msgid "article text"
+msgstr ""
+
+#: birdie_talks/models.py:16 birdie_talks/models.py:40
+#: birdie_talks/models.py:67 contacts/models.py:18 food/models.py:17
+#: our_feeders/models.py:17 your_feeders/models.py:20
+msgid "image"
+msgstr ""
+
+#: birdie_talks/models.py:18 birdie_talks/models.py:41
+#: birdie_talks/models.py:68 contacts/models.py:19 food/models.py:18
+#: our_feeders/models.py:18 your_feeders/models.py:21
+msgid "created date"
+msgstr ""
+
+#: birdie_talks/models.py:20 birdie_talks/models.py:43
+#: birdie_talks/models.py:70 contacts/models.py:21 food/models.py:20
+#: our_feeders/models.py:20 your_feeders/models.py:23
+msgid "published date"
+msgstr ""
+
+#: birdie_talks/models.py:28
+msgid "article"
+msgstr ""
+
+#: birdie_talks/models.py:29
+msgid "articles"
+msgstr ""
+
+#: birdie_talks/models.py:51
+msgid "recommendation"
+msgstr ""
+
+#: birdie_talks/models.py:52
+msgid "recommendation_articles"
+msgstr ""
+
+#: birdie_talks/models.py:63 your_feeders/models.py:16
+msgid "pupil name"
+msgstr ""
+
+#: birdie_talks/models.py:64 your_feeders/models.py:17
+msgid "pupil age"
+msgstr ""
+
+#: birdie_talks/models.py:65 your_feeders/models.py:18
+msgid "school"
+msgstr ""
+
+#: birdie_talks/models.py:66 food/models.py:16 our_feeders/models.py:16
+#: your_feeders/models.py:19
+msgid "price"
+msgstr ""
+
+#: birdie_talks/models.py:75
+msgid "feeder"
+msgstr ""
+
+#: birdie_talks/models.py:76
+msgid "feeders"
+msgstr ""
+
+#: contacts/models.py:15
+msgid "phone"
+msgstr ""
+
+#: contacts/models.py:16
+msgid "e-mail"
+msgstr ""
+
+#: contacts/models.py:17
+msgid "text"
+msgstr ""
+
+#: contacts/models.py:26 contacts/models.py:27
+msgid "contacts"
+msgstr ""
+
+#: food/models.py:25 food/models.py:26
+msgid "food"
+msgstr ""
+
+#: happybirdcafe/settings.py:126
+msgid "Russian"
+msgstr ""
+
+#: happybirdcafe/settings.py:127
+msgid "English"
+msgstr ""
+
+#: home/models.py:12
+msgid "greeting text"
+msgstr ""
+
+#: home/models.py:13
+msgid "button text"
+msgstr ""
+
+#: home/models.py:17
+msgid "greeting"
+msgstr ""
+
+#: home/models.py:18
+msgid "greetings"
+msgstr ""
+
+#: our_feeders/models.py:25
+msgid "our feeder"
+msgstr ""
+
+#: our_feeders/models.py:26
+msgid "our feeders"
+msgstr ""
+
+#: your_feeders/models.py:28
+msgid "your feeder"
+msgstr ""
+
+#: your_feeders/models.py:29
+msgid "your feeders"
+msgstr ""

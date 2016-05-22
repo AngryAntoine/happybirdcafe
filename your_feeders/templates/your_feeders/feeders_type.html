@@ -2,19 +2,47 @@
 {% load static %}
 {% block title %}{% endblock %}
 {% block content %}
-    <br><br>
+    <br>
+    <p style="text-align: center;">
+      <a href="{% url 'your_feeders:new_feeder' %}" class="btn btn-info btn-lg active" role="button">Добавить кормушку</a>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal">
+        Правила голосования
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Важно!</h4>
+            </div>
+            <div class="modal-body">
+              Для того, чтобы оставить свой голос за понравившуюся кормушку, необходимо нажать на кнопку "Подробно" под
+              соответствующей картинкой. Далее оставь свой комментарий в карточке кормушки.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p>
+    <hr>
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
         {% for feeder in your_feeders_types %}
           <div class="col-lg-4" style=" margin-bottom: 20px; text-align: center;">
             <img class="img-circle" src="{% if feeder.image %}{{ feeder.image.url }}{% else %}{% static "img/custom_feeder.jpg" %}{% endif %}" alt="Generic placeholder image" width="140" height="140" style="text-align: center;">
-            <h2>{{ feeder.title }}</h2>
-            <p>{{ feeder.text|truncatewords:15 }}</p>
+            <p>Имя: {{ feeder.pupil_name }}</p>
+            <p>Возраст: {{ feeder.pupil_age }}</p>
+            <p>Школа: {{ feeder.school }}</p>
             <p><a class="btn btn-default" href="{% url 'your_feeders:feeders_type_details' feeder.id %}" role="button">Подробно &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
         {% endfor %}
       </div>
       <div class="col-md-1"></div>
-  </div>
+    </div>
 {% endblock %}
+

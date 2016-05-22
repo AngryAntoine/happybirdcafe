@@ -27,12 +27,13 @@ urlpatterns = [
     url(r'^our_feeders/', include('our_feeders.urls', namespace='our_feeders')),
     url(r'^food/', include('food.urls', namespace='food')),
     url(r'^contacts/', include('contacts.urls', namespace='contacts')),
-    url(r'^admin/', admin.site.urls),
+    # url(r'^admin/', admin.site.urls),
 ]
-#
-# urlpatterns += i18n_patterns(
-#     url(r'^admin/', admin.site.urls),
-# )
+
+urlpatterns += i18n_patterns(
+    url(r'^admin/', admin.site.urls),
+)
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)

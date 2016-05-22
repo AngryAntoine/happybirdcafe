@@ -10,8 +10,8 @@ from django.utils.translation import ugettext_lazy as _
 
 @python_2_unicode_compatible
 class YourFeeder(models.Model):
-    author = models.ForeignKey('auth.User', verbose_name=_('author'))
-    title = models.CharField(_('title'), max_length=200)
+    author = models.ForeignKey('auth.User', verbose_name=_('author'), null=True, blank=True)
+    title = models.CharField(_('title'), max_length=200, null=True, blank=True)
     text = models.TextField(_('article text'))
     pupil_name = models.CharField(_('pupil name'), max_length=50, null=True, blank=True)
     pupil_age = models.PositiveIntegerField(_('pupil age'), null=True, blank=True)
@@ -29,4 +29,4 @@ class YourFeeder(models.Model):
         verbose_name_plural = _('your feeders')
 
     def __str__(self):
-        return self.title
+        return self.pupil_name
